@@ -34,7 +34,7 @@ static void FortyMiliSecDelay(void)
 }
 
 /*Static function to check if the delay finished or not*/
-static uint8_t KPD_StatusRead(void)
+static uint8_t LCD_StatusRead(void)
 {
 	static uint8_t local_u8Status=NOK;
 	if(global_u8Flagg==OK)
@@ -237,7 +237,7 @@ uint8_t LCD_init(void)
 			local_u8TimerInitState=OK;
 		}
 		/*Check the delay finished or not*/
-		local_u8Delay_State=KPD_StatusRead();
+		local_u8Delay_State=LCD_StatusRead();
 		/*If yes*/
 		if(local_u8Delay_State == OK)
 		{
