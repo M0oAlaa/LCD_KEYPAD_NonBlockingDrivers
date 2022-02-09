@@ -73,7 +73,7 @@ void LCD_sendComd(uint8_t u8_Data)
 	_delay_us(1);
 	DIO_SETpinVal(LCD_Ctrl,LCD_E,DIO_LOW);
 
-	_delay_ms(250);
+	_delay_us(250);
 
 
 	/*Set high bits*/
